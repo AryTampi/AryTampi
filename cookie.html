@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let southparkOptions = ['kenny.jpg', 'cartman.jpg', 'butters.jpg', 'tweek.jpg', 'stan.jpg']
+
+
+
+	function appearSomething () {
+		var cookie = document.createElement("div")
+		document.body.appendChild(cookie);
+		cookie.style.height = "200px";
+		cookie.style.width = "200px";
+		cookie.style.backgroundImage = "url(norah4.jpeg)";
+		cookie.style.display = "inline-block";
+		cookie.style.backgroundSize = "cover";
+
+
+
+		cookie.addEventListener("click", function (){
+			let randomCharacter = Math.floor(Math.random()*5);
+			let x = 'url('+ southparkOptions[randomCharacter] + ")"
+			cookie.style.backgroundImage = x;
+			console.log(southparkOptions[randomCharacter])
+			cookie.style.backgroundPosition = "center";
+			cookie.style.height = "200px";
+			cookie.style.width = "200px"
+})
+
+} // end of function
+
+	setInterval(appearSomething, 100)
+
+</script>
+</body>
+</html>
