@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	.sushi{
+		width:200px;
+			height:200px;
+			background-image:url(spicytuna.jpeg);
+			background-size:cover;
+			display:inline-block;
+	}
+
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function makeSushi(input){
+		var square = document.createElement("div")
+		document.body.appendChild(Sushi); 
+		square.classList.add("Sushi")
+		square.innerText = input;
+
+	}
+
+	for(var i=0; i<100; i=i+1){ makeSushi(i)}
+
+</script>
+
+</body>
+</html>
