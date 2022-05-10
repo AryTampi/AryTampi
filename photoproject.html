@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#cars{
+			width: 600px;
+			height: 400px;
+			border: 1px solid black;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	</style>
+</head>
+<body>
+
+<center>
+	car photo collection
+	<div id="cars"></div>
+</center>
+<script type="text/javascript">
+	var pictures = ["kia.jpg", "car2.jpeg", "car3.jpeg", "car4.jpeg"]
+	cars.addEventListener('click', function () {
+		 var randomNumber = Math.round(Math.random()*3);
+		 console.log(randomNumber)
+
+		 cars.style.backgroundImage = "url(" + pictures[randomNumber]+")"
+
+		// cars.style.backgroundImage = "url(kia.jpg)"
+		// body...
+	})
+</script>
+</body>
+</html>

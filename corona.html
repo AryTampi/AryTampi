@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div></div>
+	<div id="corona"></div>
+class
+	<script type="text/javascript">
+		// var pew = document.getElementById('sound');
+		// var input = document.getElementById('input');
+
+
+
+		var x = 0
+	// create corona creates many coronas across the screen  -creates many divs and stores it in the variable called corona
+
+
+	function createCorona() {
+		var corona = document.createElement('div');
+		document.body.appendChild(corona);
+		corona.classList.add("virus");
+
+//change position randomizes the corona's position on the screen.
+
+	function changePosition() {
+		corona.style.left = 1000 * Math.random() + "px";
+		corona.style.top = 1000 * Math.random() + "px";
+		// body...
+	}
+//this below is the event listener that makes a noise when you click on the corona and removes it from the screen.
+ 
+
+	corona.addEventListener("click", function(){
+		console.log("hi");
+		x=x+1
+		input.value =x;
+		corona.classList.remove("virus");
+		pew.play() })
+
+setInterval(changePosition, 2000)
+	};
+setIntervaL(createCorona, 1000);
+	
+		// body...
+
+	</script>
+
+</body>
+</html>
