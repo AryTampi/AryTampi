@@ -2,11 +2,26 @@
 <html>
 <head>
 	<title></title>
+
+	<style type="text/css">
+		.virus{
+			width: 200px;
+		height: 200px;
+		background-image: url(quandale.jpeg);
+		position: absolute;
+		transition:0.9s;
+
+		}
+		
+
+	</style>
+	
 </head>
 <body>
-	<div></div>
-	<div id="corona"></div>
-class
+	<audio id="suii" src="quan.mp3" >
+	</audio>
+
+<div id="scoreboard"></div>
 	<script type="text/javascript">
 		// var pew = document.getElementById('sound');
 		// var input = document.getElementById('input');
@@ -14,6 +29,7 @@ class
 
 
 		var x = 0
+		
 	// create corona creates many coronas across the screen  -creates many divs and stores it in the variable called corona
 
 
@@ -21,6 +37,17 @@ class
 		var corona = document.createElement('div');
 		document.body.appendChild(corona);
 		corona.classList.add("virus");
+
+//this is the beginning of the event listener//
+		corona.addEventListener("click", function(){
+		corona.classList.remove("virus");
+		x=x+1
+		console.log(x);
+		scoreboard.innerText = x;
+		suii.play()
+
+
+		 })
 
 //change position randomizes the corona's position on the screen.
 
@@ -31,19 +58,16 @@ class
 	}
 //this below is the event listener that makes a noise when you click on the corona and removes it from the screen.
  
-
-	corona.addEventListener("click", function(){
-		console.log("hi");
-		x=x+1
-		input.value =x;
-		corona.classList.remove("virus");
-		pew.play() })
-
 setInterval(changePosition, 2000)
-	};
-setIntervaL(createCorona, 1000);
+
+
+
+	}; //this is the end of the "create coronoa function"//
+
+
+setInterval(createCorona, 1000);
 	
-		// body...
+// body...
 
 	</script>
 
